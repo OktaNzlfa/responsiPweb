@@ -38,65 +38,7 @@
         
                 <button type="submit" value="Hitung Total">Total</button>
 
-                <?php
-                // Proses perhitungan total pembelian
-                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    // Mengambil nilai dari form
-                        $tanggal = $_POST["tanggal"];
-                        $bensin = $_POST["jenis_bensin"];
-                        $harga_per_liter = $_POST["harga"];
-                        $jumlah_liter = $_POST["liter"];
-
-                    // Validasi input (opsional)
-                        if ($bensin == "") {
-                            echo "<p style='color: red;'>Silakan pilih jenis bensin terlebih dahulu.</p>";
-                        } elseif ($harga_per_liter <= 0 || $jumlah_liter <= 0) {
-                            echo "<p style='color: red;'>Mohon masukkan angka yang valid untuk harga dan jumlah liter.</p>";
-                        } else {
-                        // Menghitung total pembelian berdasarkan jenis bensin
-                            switch ($bensin) {
-                                case 'pertalite':
-                                    $output = "Bensin Pertalite (Rp.10.000/liter)|10.000";
-                                    $bensin = "Bensin Pertalite (Rp.10.000/liter)";
-                                    break;
-                                case 'bensin-premium':
-                                    $output = "Bensin Premium (Rp.13.000/liter)|13.000";
-                                    $bensin = "Bensin Premium (Rp.13.000/liter)";
-                                    break;
-                                case 'solar':
-                                    $output = "Solar/Diesel (Rp.18.000/liter)|18.000";
-                                    $bensin = "Solar/Diesel (Rp.18.000/liter)";
-                                    break;
-                            default:
-                                $nama_bensin = "Jenis Bensin Tidak Dikenali";
-                                break;
-                            }
-
-                        // Menghitung total pembelian
-                            $total_pembelian = $harga_per_liter * $jumlah_liter;
-                            $output = date('y-m-d', strtotime($tanggal)) . "|" . $bensin . "|" . $harga_per_liter . "|" . $jumlah_liter . "|" . number_format($total_pembelian, 3) . "|";
-
-                            echo "<h3>Total Pembelian Bensin:</h3>";
-                            echo "<p>Tanggal : " . date($tanggal). "</p>";
-                            echo "<p>Jenis Bensin: " . $bensin . "</p>";
-                            echo "<p>Harga per liter: Rp " . number_format($harga_per_liter, 3) . "</p>";
-                            echo "<p>Jumlah liter: " . number_format($jumlah_liter, 3) . "</p>";
-                            echo "<h4>Total: Rp " . number_format($total_pembelian, 3) . "</h4>";
-
-                        // Menampilkan data transaksi ke layar
-                            echo "<p>Data transaksi:</p>";
-                            echo "<pre>" . $output . "</pre>";
-
-                        // Menyimpan ke dalam file.txt
-                            $file = 'data.txt';
-                            if (file_put_contents($file, $output . "\n", FILE_APPEND | LOCK_EX) !== false) {
-                                echo "<p>Transaksi berhasil disimpan ke data.txt.</p>";
-                            } else {
-                                echo "<p style='color: red;'>Gagal menyimpan transaksi ke data.txt.</p>";
-                            }
-                        }
-                    }
-                ?>
+                <h3>Total Pembelian Bensin:</h3><p>Tanggal : 1023-12-12</p><p>Jenis Bensin: Bensin Premium (Rp.13.000/liter)</p><p>Harga per liter: Rp 13.000</p><p>Jumlah liter: 7.000</p><h4>Total: Rp 91.000</h4><p>Data transaksi:</p><pre>23-12-12|Bensin Premium (Rp.13.000/liter)|13.000|7|91.000|</pre><p>Transaksi berhasil disimpan ke data.txt.</p>
                 
             </form><br>
 

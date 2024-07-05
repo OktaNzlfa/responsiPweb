@@ -42,7 +42,7 @@
 
             if (!empty($transactions)) {
                 echo "<table>";
-                    echo "<tr><th>Tanggal</th><th>Jenis Bensin</th><th>Harga per liter (Rp)</th><th>Jumlah liter</th><th>Total (Rp)</th></tr>"
+                    echo "<tr><th>Tanggal</th><th>Jenis Bensin</th><th>Harga per liter (Rp)</th><th>Jumlah liter</th><th>Total (Rp)</th></tr>";
 
                     foreach ($transactions as $transaction) {
                         if (!empty($transaction)) {
@@ -63,7 +63,7 @@
                 echo "<p>Tidak ada transaksi yang tersimpan.</p>";
             }
         } else {
-            echo "<p>File tidak ditemukan.</p>"
+            echo "<p>File tidak ditemukan.</p>";
         }
     ?>
 

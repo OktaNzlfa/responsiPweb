@@ -27,8 +27,8 @@
 </head>
 <body>
 
-    <a href="index.php">
-        <img src="assets/img/back.png" alt="" srcset="" id = "back">
+    <a href="index.html">
+        <img src="back.png" alt="" srcset="" id = "back">
     </a>
 
     <h2>Laporan Transaksi Pembelian Bensin</h2>

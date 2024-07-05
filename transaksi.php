@@ -11,8 +11,8 @@
 <body>
     <div class="container">
 
-        <a href="index.php">
-        <img src="assets/img/back.png" alt="" srcset="" id = "back">
+        <a href="index.html">
+        <img src="back.png" alt="" srcset="" id = "back">
         </a>
 
         <div class="form">

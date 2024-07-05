@@ -9,31 +9,9 @@
     <title>POM Bensin - Welcome</title>
 </head>
 <body>
-    <?php
-    if (isset($_GET['pesan'])) {
-        if ($_GET['pesan'] == "logout") {
-            echo"<script>
-            Swal.fire({
-                icon: 'success',
-                title: 'Berhasi logout',
-                text: 'Anda telah berhasil logout dari sistem.',
-            });</script>
-            ";
-        }
-        else if ($_GET['pesan'] == "belumlogin") {
-            echo"<script>
-            Swal.fire({
-                icon: 'error',
-                title: 'Anda Belum Login',
-                text: 'Silahkan login terlebih dahulu.',
-            });</script>
-            ";
-        }
-    }
-    ?>
 
     <nav>
-        <img id="logo" src="assets/img/logo.webp" alt="Logo perusahaan">
+        <img id="logo" src="logo.png" alt="Logo perusahaan">
         <div class="cta">
             <h1>POM Bensin Mini IKAZA</h1>
         </div>

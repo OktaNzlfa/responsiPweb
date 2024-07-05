@@ -3,3 +3,9 @@
 20-07-31|Bensin Pertalite (Rp.10.000/liter)|10.000|15|150.000|
 23-10-21|Bensin Premium (Rp.13.000/liter)|13.000|12|156.000|
 23-04-12|Bensin Pertalite (Rp.10.000/liter)|10.000|5|50.000|
+22-02-02|Bensin Premium (Rp.13.000/liter)|13.000|5|65.000|
+95-03-12|Solar/Diesel (Rp.18.000/liter)|18.000|5|90.000|
+11-02-02|Bensin Premium (Rp.13.000/liter)|13.000|5|65.000|
+10-07-03|Solar/Diesel (Rp.18.000/liter)|18.000|10|180.000|
+23-12-12|Bensin Premium (Rp.13.000/liter)|13.000|7|91.000|
+24-03-13|Bensin Pertalite (Rp.10.000/liter)|10.000|15|150.000|

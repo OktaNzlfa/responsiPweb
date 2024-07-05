@@ -1,3 +1,5 @@
-<FilesMatch "\.html$">
-    SetHandler application/x-httpd-php
-</FilesMatch>
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^(.+)\.html?$ $1.php [L]
+</IfModule>

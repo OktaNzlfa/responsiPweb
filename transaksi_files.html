@@ -38,31 +38,6 @@
         
                 <button type="submit" value="Hitung Total">Total</button>
 
-                <?php
-                    // Menghitung total pembelian
-                            $total_pembelian = $harga_per_liter * $jumlah_liter;
-                            $output = date('y-m-d', strtotime($tanggal)) . "|" . $bensin . "|" . $harga_per_liter . "|" . $jumlah_liter . "|" . number_format($total_pembelian, 3) . "|";
-
-                            echo "<h3>Total Pembelian Bensin:</h3>";
-                            echo "<p>Tanggal : " . date($tanggal). "</p>";
-                            echo "<p>Jenis Bensin: " . $bensin . "</p>";
-                            echo "<p>Harga per liter: Rp " . number_format($harga_per_liter, 3) . "</p>";
-                            echo "<p>Jumlah liter: " . number_format($jumlah_liter, 3) . "</p>";
-                            echo "<h4>Total: Rp " . number_format($total_pembelian, 3) . "</h4>";
-
-                        // Menampilkan data transaksi ke layar
-                            echo "<p>Data transaksi:</p>";
-                            echo "<pre>" . $output . "</pre>";
-
-                        // Menyimpan ke dalam file.txt
-                            $file = 'data.txt';
-                            if (file_put_contents($file, $output . "\n", FILE_APPEND | LOCK_EX) !== false) {
-                                echo "<p>Transaksi berhasil disimpan ke data.txt.</p>";
-                            } else {
-                                echo "<p style='color: red;'>Gagal menyimpan transaksi ke data.txt.</p>";
-                            }
-                ?>
-
                 <h3>Total Pembelian Bensin:</h3><p>Tanggal : 2424-03-13</p><p>Jenis Bensin: Bensin Pertalite (Rp.10.000/liter)</p><p>Harga per liter: Rp 10.000</p><p>Jumlah liter: 15.000</p><h4>Total: Rp 150.000</h4><p>Data transaksi:</p><pre>24-03-13|Bensin Pertalite (Rp.10.000/liter)|10.000|15|150.000|</pre><p>Transaksi berhasil disimpan ke data.txt.</p>                
             </form><br>
 
